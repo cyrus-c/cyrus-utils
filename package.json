@@ -1,0 +1,33 @@
+{
+  "name": "cyrus-utils",
+  "version": "1.0.0",
+  "description": "前端工具函数库",
+  "main": "dist/cyrus-utils.cjs.js",
+  "module": "dist/cyrus-utils.esm.js",
+  "browser": "dist/cyrus-utils.umd.js",
+  "types": "src/index.d.ts",
+  "type": "module",
+  "files": [
+    "src",
+    "dist/*.js"
+  ],
+  "scripts": {
+    "build": "rollup -c",
+    "test": "jest"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@babel/core": "^7.21.4",
+    "@babel/preset-env": "^7.21.4",
+    "@babel/preset-typescript": "^7.21.4",
+    "@rollup/plugin-typescript": "^11.1.0",
+    "@types/jest": "^29.5.0",
+    "@types/node": "^18.15.11",
+    "babel-jest": "^29.5.0",
+    "jest": "^29.5.0",
+    "rollup": "^3.20.2",
+    "rollup-plugin-node-resolve": "^5.2.0",
+    "tslib": "^2.5.0"
+  }
+}
