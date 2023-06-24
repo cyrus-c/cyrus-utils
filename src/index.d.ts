@@ -111,6 +111,13 @@ declare namespace cyrusUtils {
    * @param name key值
    */
   export function removeSession(name: string)
+  
+  /**
+   * 计算日期相差
+   * @param date Date类型 new Date()
+   * @return string
+   */
+  // export function diffDays(dateStart: Date, dateEnd: Date): number
 }
 declare module 'cyrus-utils' {
   export = cyrusUtils
