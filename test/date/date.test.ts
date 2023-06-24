@@ -1,4 +1,4 @@
-import { format, makeChNumber, makeChTime, makeDuration } from '../../src/index'
+import { format, makeChNumber, makeChTime, makeDuration,diffDays } from '../../src/index'
 
 describe('日期格式化', () => {
   it('format(new Date(), "yyyyMMddhhmmss") -> should return 1', () => {
@@ -52,5 +52,14 @@ describe('转换音视频时长', () => {
   it(`makeDuration(3787) -> should return 01:03:07`, () => {
     const rand = makeDuration(3787)
     expect(rand).toBe('01:03:07')
+  })
+})
+describe('计算日期相差', () => {
+  let date1 = new Date("2022-12-31");
+  let date2 = new Date("2023-01-02");
+  let diffTime = Math.abs(date2.getTime() - date1.getTime());
+  it(`diffDays("${date1}","${date2}") -> should return 2`, () => {
+    const days = diffDays(date1,date2)
+    expect(days).toBe(2)
   })
 })

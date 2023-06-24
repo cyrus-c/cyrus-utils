@@ -117,7 +117,7 @@ declare namespace cyrusUtils {
    * @param date Date类型 new Date()
    * @return string
    */
-  // export function diffDays(dateStart: Date, dateEnd: Date): number
+  export function diffDays(dateStart: Date, dateEnd: Date): number
 }
 declare module 'cyrus-utils' {
   export = cyrusUtils

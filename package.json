@@ -2,7 +2,7 @@
   "name": "cyrus-utils",
   "version": "1.1.2",
   "description": "前端常用工具函数封装",
-  "author": "kinghao",
+  "author": "cyrus",
   "license": "MIT",
   "main": "dist/cyrus-utils.cjs.js",
   "module": "dist/cyrus-utils.esm.js",

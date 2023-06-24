@@ -241,6 +241,16 @@ function makeChNumber(value) {
     }
     return newValue.join('');
 }
+/**
+   * 计算日期相差
+   * @param date Date类型 new Date()
+   * @return string
+ */
+function diffDays(dateStart, dateEnd) {
+    var diffTime = Math.abs(dateEnd.getTime() - dateStart.getTime());
+    var diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    return diffDays;
+}
 
 /**
  * 判断xx相关工具函数
@@ -387,4 +397,4 @@ function removeSession(name) {
     window.sessionStorage.removeItem(name);
 }
 
-export { format, getLocal, getSession, getTimestamp, getUrlVal, isArray, isEmpty, isNumber, makeChNumber, makeChTime, makeDuration, parseUrlValToJson, random, removeLocal, removeSession, setLocal, setSession, uuid };
+export { diffDays, format, getLocal, getSession, getTimestamp, getUrlVal, isArray, isEmpty, isNumber, makeChNumber, makeChTime, makeDuration, parseUrlValToJson, random, removeLocal, removeSession, setLocal, setSession, uuid };

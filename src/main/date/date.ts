@@ -206,3 +206,13 @@ export function makeChNumber(value: number): string {
   }
   return newValue.join('')
 }
+/**
+   * 计算日期相差
+   * @param date Date类型 new Date()
+   * @return string
+ */
+export function diffDays(dateStart: Date, dateEnd: Date): number {
+  let diffTime = Math.abs(dateEnd.getTime() - dateStart.getTime());
+  let diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+  return diffDays
+}
