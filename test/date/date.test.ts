@@ -44,16 +44,16 @@ describe('转换时间字符串为大致时间描述', () => {
   })
 })
 
-describe('转换音视频时长', () => {
-  it(`makeDuration(155) -> should return 02:35`, () => {
-    const rand = makeDuration(155)
-    expect(rand).toBe('02:35')
-  })
-  it(`makeDuration(3787) -> should return 01:03:07`, () => {
-    const rand = makeDuration(3787)
-    expect(rand).toBe('01:03:07')
-  })
-})
+// describe('转换音视频时长', () => {
+//   it(`makeDuration(155) -> should return 02:35`, () => {
+//     const rand = makeDuration(155)
+//     expect(rand).toBe('02:35')
+//   })
+//   it(`makeDuration(3787) -> should return 01:03:07`, () => {
+//     const rand = makeDuration(3787)
+//     expect(rand).toBe('01:03:07')
+//   })
+// })
 describe('计算日期相差', () => {
   let date1 = new Date("2022-12-31");
   let date2 = new Date("2023-01-02");

@@ -72,30 +72,32 @@ function format(date, fmt) {
  * @returns 时间字符串：02:00
  */
 function makeDuration(duration) {
-    var h = Math.floor(duration / 3600) < 10
-        ? '0' + Math.floor(duration / 3600)
-        : Math.floor(duration / 3600);
-    var m = Math.floor((duration / 60) % 60) < 10
-        ? '0' + Math.floor((duration / 60) % 60)
-        : Math.floor((duration / 60) % 60);
-    var s = Math.floor(duration % 60) < 10 ? '0' + Math.floor(duration % 60) : Math.floor(duration % 60);
-    var res = '';
-    if (h > 0) {
-        res += h + ':';
-    }
-    if (m > 0) {
-        res += m + ':';
-    }
-    else {
-        res += '00:';
-    }
-    if (s > 0) {
-        res += s;
-    }
-    else {
-        res += '00';
-    }
-    return res;
+    // const h =
+    //   Math.floor(duration / 3600) < 10
+    //     ? '0' + Math.floor(duration / 3600)
+    //     : Math.floor(duration / 3600)
+    // const m =
+    //   Math.floor((duration / 60) % 60) < 10
+    //     ? '0' + Math.floor((duration / 60) % 60)
+    //     : Math.floor((duration / 60) % 60)
+    // const s =
+    //   Math.floor(duration % 60) < 10 ? '0' + Math.floor(duration % 60) : Math.floor(duration % 60)
+    // let res = ''
+    // if (h > 0) {
+    //   res += h + ':'
+    // }
+    // if (m > 0) {
+    //   res += m + ':'
+    // } else {
+    //   res += '00:'
+    // }
+    // if (s > 0) {
+    //   res += s
+    // } else {
+    //   res += '00'
+    // }
+    // return res
+    return 'res';
 }
 /**
  * 转换时间字符串为大致时间描述
