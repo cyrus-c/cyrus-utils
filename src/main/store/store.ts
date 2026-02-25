@@ -1,5 +1,5 @@
 /**
- * 浏览器存储 工具函数
+ * 浏览器存储工具函数
  */
 
 /**
@@ -18,9 +18,9 @@ export function setLocal(name: string, content: any): void {
 }
 
 /**
- * 获取存储localStorage
+ * 获取localStorage
  * @param name key值
- * @return string
+ * @returns string | null
  */
 export function getLocal(name: string): string | null {
   if (!name) return null
@@ -32,7 +32,7 @@ export function getLocal(name: string): string | null {
  * 删除localStorage
  * @param name key值
  */
-export function removeLocal(name: string) {
+export function removeLocal(name: string): void {
   if (!name) return
   if (!window.localStorage) return
   window.localStorage.removeItem(name)
@@ -43,7 +43,7 @@ export function removeLocal(name: string) {
  * @param name key值
  * @param content value值
  */
-export function setSession(name: string, content: any) {
+export function setSession(name: string, content: any): void {
   if (!name) return
   if (typeof content !== 'string') {
     content = JSON.stringify(content)
@@ -52,9 +52,9 @@ export function setSession(name: string, content: any) {
 }
 
 /**
- * 获取localStorage
+ * 获取sessionStorage
  * @param name key值
- * @return string
+ * @returns string | null
  */
 export function getSession(name: string): string | null {
   if (!name) return null
@@ -62,10 +62,10 @@ export function getSession(name: string): string | null {
 }
 
 /**
- * 删除localStorage
+ * 删除sessionStorage
  * @param name key值
  */
-export function removeSession(name: string) {
+export function removeSession(name: string): void {
   if (!name) return
   window.sessionStorage.removeItem(name)
 }

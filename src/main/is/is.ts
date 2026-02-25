@@ -1,5 +1,5 @@
 /**
- * 判断xx相关工具函数
+ * 判断相关工具函数
  */
 
 /**
@@ -8,16 +8,19 @@
  * @returns boolean
  */
 export function isArray(input: any): boolean {
-  return input instanceof Array || Object.prototype.toString.call(input) === '[object Array]'
+  return Array.isArray(input)
 }
 
 /**
- * 判断是否为空
+ * 判断是否为空（undefined、null、空字符串、空数组、空对象）
  * @param input 任意值对象
  * @returns boolean
  */
 export function isEmpty(input: any): boolean {
-  return typeof input === 'undefined' || input === null || input === ''
+  if (input === undefined || input === null || input === '') return true
+  if (Array.isArray(input)) return input.length === 0
+  if (typeof input === 'object') return Object.keys(input).length === 0
+  return false
 }
 
 /**
@@ -26,5 +29,5 @@ export function isEmpty(input: any): boolean {
  * @returns boolean
  */
 export function isNumber(input: any): boolean {
-  return input instanceof Number || Object.prototype.toString.call(input) === '[object Number]'
+  return typeof input === 'number' && !isNaN(input)
 }

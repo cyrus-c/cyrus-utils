@@ -8,6 +8,13 @@
   "module": "dist/cyrus-utils.esm.js",
   "browser": "dist/cyrus-utils.umd.js",
   "types": "src/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/cyrus-utils.esm.js",
+      "require": "./dist/cyrus-utils.cjs.js",
+      "default": "./dist/cyrus-utils.umd.js"
+    }
+  },
   "files": [
     "src",
     "dist/*.js"
